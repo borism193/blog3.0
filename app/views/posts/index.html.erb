@@ -1,0 +1,17 @@
+<table class="table">
+<tr>
+
+    <th>Titulo </th>
+    <th>Imagen </th>
+    <th>Contenido </th>
+
+</tr>
+<% @posts.reverse_each do |post| %>
+<tr>
+    <td> <%= post.title %> </td>
+    <td> <img src= <%=post.image_url%> alt="image"></td>
+    <td> <%= post.content %> </td>
+    <td> <%= post.created_at %> </td>
+<tr>
+<%end%>
+</table>
